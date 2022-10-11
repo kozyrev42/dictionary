@@ -1,0 +1,7 @@
+CREATE DATABASE `dictionary` DEFAULT CHARACTER SET = 'utf8mb4';
+
+CREATE TABLE `keyword` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(100),
+    PRIMARY KEY (id)
+);
