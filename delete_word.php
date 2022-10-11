@@ -16,9 +16,8 @@ $words = get_all_words();
     <title>Словарь</title>
 </head>
 <body>
-    <h1>Словарь</h1>
-    <button><a href="add_word.php">Добавить слово</a></button>
-    <button><a href="delete_word.php">Удалить слово</a></button>
+    <h1>Кликните на слово для удаления из славоря</h1>
+    <button><a href="/">Вернуться обратно</a></button>
     <h1>А</h1>
     <!-- циклом проходим по каждой записи -->
     <?php foreach ($words as $word) :?>
@@ -30,28 +29,31 @@ $words = get_all_words();
         ?>   
         <!-- если перевая буква соответствует условию, выводим слово -->
         <?php if ($first_letter == "а"):?> 
-            <h4> <ul type="square"><li><?php echo $text ?></li></ul> </h4>
+            <a href="delete_handler.php?id=<?php echo $word['id'] ?>"> <?php echo $text ?> </a> <br/>
         <?php endif;?>
     <?php endforeach;?>
         
     <h1>Б</h1>
     <?php foreach ($words as $word) :?>
-        <?php $text = $word['name'];
-              $first_letter = mb_strcut($text, 0, 2, 'UTF-8');?>   
+        <?php 
+            $text = $word['name'];
+            $first_letter = mb_strcut($text, 0, 2, 'UTF-8');
+        ?>   
         <?php if ($first_letter == "б"):?> 
-            <h4> <ul type="square"><li><?php echo $text ?></li></ul> </h4>
+            <a href="delete_handler.php?id=<?php echo $word['id'] ?>"> <?php echo $text ?> </a> <br/>
         <?php endif;?>
     <?php endforeach;?>
 
     <h1>В</h1>
     <?php foreach ($words as $word) :?>
-        <?php $text = $word['name'];
-              $first_letter = mb_strcut($text, 0, 2, 'UTF-8');?>   
+        <?php 
+            $text = $word['name'];
+            $first_letter = mb_strcut($text, 0, 2, 'UTF-8');
+        ?>   
         <?php if ($first_letter == "в"):?> 
-            <h4> <ul type="square"><li><?php echo $text ?></li></ul> </h4>
+            <a href="delete_handler.php?id=<?php echo $word['id'] ?>"> <?php echo $text ?> </a> <br/>
         <?php endif;?>
     <?php endforeach;?>
-
 
 
 </body>

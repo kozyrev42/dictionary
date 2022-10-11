@@ -1,0 +1,13 @@
+html, body {
+    background-color: #e0e0e0;
+    margin: 25px;
+}
+
+h1, h2, h3, h4, h5, li {
+    font-family: 'Arial', sans-serif ;
+}
+
+ul, li, a {
+    font-family: 'Arial', sans-serif ;
+    text-transform: capitalize;
+}
