@@ -14,7 +14,7 @@
     <br/>
     <form action="add_word_handler.php" method="POST">
         <div>
-            <input type="text" name="word">
+            <input type="text" name="word" placeholder="ввод в нижнем регистре">
             <button type="submit">Добавить в словарь</button>
         </div>
     </form>
